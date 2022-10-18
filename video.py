@@ -13,7 +13,7 @@ def interference(img):
     pilImage.save(buffered, quality=100, format="JPEG")
     m = MultipartEncoder(fields={'file': ("imageToUpload", buffered.getvalue(), "image/jpeg")})
 
-    response = requests.post("https://detect.roboflow.com/licence-plate-ellea/1?api_key=iMZli8T33eSe5jcKxAT1", data=m,
+    response = requests.post("<your roboflow api key>", data=m,
                              headers={'Content-Type': m.content_type})
     # print(response)
     # print(response.json())
